@@ -1,6 +1,6 @@
+# AppJailLauncher
 [![Build status](https://ci.appveyor.com/api/projects/status/y3njt0o6iqoumwr4?svg=true)](https://ci.appveyor.com/project/dguido/appjaillauncher)
 
-# AppJailLauncher
 ## Supported Operating Systems
 AppJailLauncher requires AppContainer functionality on Windows which limits  support to Windows 8 and above.
 
