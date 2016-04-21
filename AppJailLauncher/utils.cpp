@@ -537,6 +537,14 @@ Exit:
 		}
 		FREE(CapabilitiesList);
 	}
+    
+    if (pi.hThread != NULL && pi.hThread != INVALID_HANDLE_VALUE) {
+        CloseHandle(pi.hThread);
+    }
+
+    if (pi.hProcess != NULL && pi.hProcess != INVALID_HANDLE_VALUE) {
+        CloseHandle(pi.hProcess);
+    }
 
 	return hr;
 }
