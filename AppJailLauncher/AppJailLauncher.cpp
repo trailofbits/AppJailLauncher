@@ -373,7 +373,7 @@ int Do_LaunchServer(
 		0), Exit);
 
 	LOG("Creating WSA events.\n");
-	hAcceptEvent = WSACreateEvent();
+	hAcceptEvent = CreateEvent(NULL, FALSE, FALSE, NULL); // auto-reset event for accept
 	WS2_ASSERT(hAcceptEvent != WSA_INVALID_EVENT, Exit);
 
 	g_hQuitListenEvent = WSACreateEvent();
@@ -440,7 +440,6 @@ int Do_LaunchServer(
 				}
 
 				closesocket(clientSocket);
-				WS2_ASSERT(WSAResetEvent(hAcceptEvent), Exit);
 			}
 			else {
 				ERR(
