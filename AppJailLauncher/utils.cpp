@@ -383,7 +383,7 @@ HRESULT CreateClientSocketWorker(
 
 	LPTSTR pszCommandLine = NULL;
 	PSID pSid = NULL;
-	DWORD dwCreationFlags = CREATE_SUSPENDED;
+	DWORD dwCreationFlags = CREATE_SUSPENDED | DETACHED_PROCESS;
 	DWORD dwCapabilitiesCount = 0;
 	DWORD dwAttributeListSize = 0;
 	LPPROC_THREAD_ATTRIBUTE_LIST AttributeList = NULL;
